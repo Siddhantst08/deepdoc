@@ -1,0 +1,16 @@
+  File "/usr/local/lib/python3.10/dist-packages/gradio/routes.py", line 508, in predict
+    output = await route_utils.call_process_api(
+  File "/usr/local/lib/python3.10/dist-packages/gradio/route_utils.py", line 219, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/usr/local/lib/python3.10/dist-packages/gradio/blocks.py", line 1435, in process_api
+    inputs = self.preprocess_data(fn_index, inputs, state)
+  File "/usr/local/lib/python3.10/dist-packages/gradio/blocks.py", line 1245, in preprocess_data
+    processed_input.append(block.preprocess(inputs[i]))
+  File "/usr/local/lib/python3.10/dist-packages/gradio/components/image.py", line 274, in preprocess
+    im = processing_utils.decode_base64_to_image(x)
+  File "/usr/local/lib/python3.10/dist-packages/gradio/processing_utils.py", line 59, in decode_base64_to_image
+    img = Image.open(BytesIO(base64.b64decode(image_encoded)))
+  File "/usr/local/lib/python3.10/dist-packages/PIL/Image.py", line 3283, in open
+    fp = io.BytesIO(fp.read())
+PIL.UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x7eac71d3df30>
+Keyboard interruption in main thread... closing server.
